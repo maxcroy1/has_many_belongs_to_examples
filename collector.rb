@@ -1,5 +1,7 @@
 class Collector
 
+    attr_reader :name
+
     @@all = []
 
     def initialize(name)
@@ -13,16 +15,16 @@ class Collector
 
     def record_collection
         Record.all.select do |record|
-            record.owner == self
+            record.collector == self
         end
     end
 
     #Question: What if our enumerable resolves to an empty array or nil? IE, if a friend comes over and says "Hey do you
     #have 808's and Heartbreaks on record?" and record_by_name returns nil, how can I use that to serve an error?
 
-    def records_by_artist(artist)
-        self.record_collection.map do |record|
-            record.owner == artist
+    def records_by_artist(record_artist)
+        self.record_collection.select do |record|
+            record.artist == record_artist
         end
     end
 

@@ -1,14 +1,14 @@
 class Record
 
-    attr_accessor :owner
+    attr_accessor :collector
     attr_reader :name, :artist
 
 @@all = []
 
-def initialize(name, owner, artist)
+def initialize(name, collector, artist)
     @name = name
     @artist = artist
-    @owner = owner
+    @collector = collector
     @@all << self
 end
 
