@@ -4,4 +4,4 @@ For my example, I decided to model the relationship that a Collector has with th
 
 In this example, a record can be instantiated with a name, an aritst, and an owner. An owner is just instantiated with a name. 
 
-The owner is able to see a list of all of their records, find records by a particular artist, or even a specific record.
+The owner is able to see a list of all of their records, find records by a particular artist, and find a specific record.
